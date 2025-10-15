@@ -1061,7 +1061,7 @@ header {
     outline: none !important;
     transition: all 0.3s ease-in-out;
   }
-  .menu-bars .dark-mode {
+  .dark-mode .menu-bars {
     color: var(--white-color);
   }
   .menu-bars:hover {
@@ -2920,7 +2920,7 @@ html[dir=ltr] .return-link i {
   border: 1px solid var(--border-color);
   padding: 32px 16px;
 }
-.pricing-item .dark-mode {
+.dark-mode .pricing-item {
   border-color: rgba(255, 255, 255, 0.2);
 }
 @media only screen and (max-width: 991px) {
@@ -2962,6 +2962,7 @@ html[dir=ltr] .return-link i {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   background-color: rgba(237, 138, 10, 0.1019607843);
   height: 38px;
   border-radius: 20px;
@@ -3171,7 +3172,7 @@ html[dir=ltr] .return-link i {
   }
 }
 .dark-mode .payment-cont .check-label {
-  border-color: var(--border-color);
+  border-color: rgba(255, 255, 255, 0.1019607843);
 }
 .payment-cont .check-label .checkmark {
   position: relative;
@@ -3307,6 +3308,9 @@ html[dir=ltr] .return-link i {
   height: -moz-max-content;
   height: max-content;
   padding: 14px 0;
+}
+.dark-mode .product-total-box {
+  border-color: rgba(255, 255, 255, 0.1019607843);
 }
 
 .total-header {

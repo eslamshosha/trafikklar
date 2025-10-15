@@ -603,7 +603,7 @@ header {
     border: none;
     outline: none !important;
     transition: all 0.3s ease-in-out;
-    .dark-mode {
+    .dark-mode &{
       color: $white;
     }
   }

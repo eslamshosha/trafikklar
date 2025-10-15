@@ -51,7 +51,7 @@
   background-color: $background;
   border: 1px solid $border;
   padding: 32px 16px;
-  .dark-mode {
+  .dark-mode & {
     border-color: #ffffff33;
   }
   @include max-991 {
@@ -84,6 +84,7 @@
   }
   .pricing-custom {
     @include flexCenter;
+    flex-shrink: 0;
     background-color: #ed8a0a1a;
     height: 38px;
     border-radius: 20px;
@@ -265,7 +266,7 @@
       height: 56px;
     }
     .dark-mode & {
-      border-color: $border;
+      border-color: #ffffff1a;
     }
     @include tr;
     .checkmark {
@@ -390,6 +391,9 @@
   text-align: start;
   height: max-content;
   padding: 14px 0;
+  .dark-mode & {
+    border-color: #ffffff1a;
+  }
 }
 .total-header {
   display: flex;
