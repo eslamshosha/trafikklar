@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trafikklar</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      /* Sidebar */
+      .sidebar {
+        width: 220px;
+        flex-shrink: 0;
+      }
+
+      .tab-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 6px;
+        border: none;
+        background: #f5f5f5;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      .tab-btn.active {
+        background: linear-gradient(90deg, #7b61ff, #9b76ff);
+        color: #fff;
+      }
+
+      .arrow {
+        transition: transform 0.3s ease;
+      }
+      .arrow.rotate {
+        transform: rotate(90deg);
+      }
+
+      /* Content area */
+      .content-area {
+        flex: 1;
+        padding: 1rem;
+        background: #fafafa;
+        border-radius: 8px;
+        min-height: 200px;
+      }
+
+      .content {
+        display: none;
+      }
+      .content.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Mobile layout */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+        }
+
+        .content-area {
+          display: none; /* نخفي منطقة المحتوى المنفصلة */
+        }
+
+        /* نعرض المحتوى تحت الزر */
+        .tab-btn + .mobile-content {
+          display: none;
+          padding: 10px;
+          border-top: 1px solid #eee;
+          background: #fff;
+          border-radius: 0 0 6px 6px;
+        }
+
+        .tab-btn.active + .mobile-content {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="fixedHeader">
+    <img src="images/light-bg.svg" alt="bg" class="body-bg" />
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <!-- preloader -->
+    <!-- header section -->
+    <header>
+      <div class="top-header">
+        <div class="upper-header">
+          <div class="container">
+            <div class="upper-cont">
+              <div class="upper-icon-cont">
+                <div class="dropdown">
+                  <div class="add-to">
+                    <div class="dropdown-ancor">
+                      <i class="fa-light fa-globe"></i>
+                      <span>eng</span>
+                      <i class="fa-light fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                      <a class="lang-drop" href="#"
+                        ><span class="lang-flex"
+                          ><img
+                            src="images/flag-en.png"
+                            alt="flag"
+                          />english</span
+                        >
+                        <span class="circle active"></span
+                      ></a>
+                      <a class="lang-drop" href="#"
+                        ><span class="lang-flex"
+                          ><img
+                            src="images/flag-ar.png"
+                            alt="flag"
+                          />arabic</span
+                        >
+                        <span class="circle"></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-social">
+                  <span>Follow us :</span>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="nav-header">
+            <figure class="img-logo">
+              <a href="index.html"
+                ><img src="images/logo.svg" class="img-fluid"
+              /></a>
+            </figure>
+            <div class="navgition">
+              <div class="nav-head">
+                <span>side menu</span>
+                <button class="close-menu">
+                  <i class="fa-light fa-circle-x"></i>
+                </button>
+              </div>
+              <ul class="big-menu list-unstyled">
+                <li>
+                  <a href="index.html" class="active"> home </a>
+                </li>
+                <li>
+                  <a href="#"> About Us</a>
+                </li>
+                <li>
+                  <a href="#"> Driver Tests </a>
+                </li>
+                <li>
+                  <a href="#"> Contact us</a>
+                </li>
+                <li>
+                  <a href="#"> Prices</a>
+                </li>
+              </ul>
+              <div class="header-btn menu-btn">
+                <a href="sign-in.html" class="first-btn">sign in</a>
+                <a href="sign-up.html" class="second-btn">sign up</a>
+              </div>
+              <ul class="profile-menu menu-profile">
+                <li>
+                  <a href="account.html">
+                    <i class="fa-light fa-circle-user"></i>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-light fa-book"></i>
+                    <span>My History</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <i class="fa-light fa-square-poll-vertical"></i>
+                    <span>Statistics</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="logout">
+                    <i class="fa-light fa-bell"></i>
+                    <span>Notifications</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="warning">
+                    <i class="fa-light fa-right-from-bracket"></i>
+                    <span>Log Out</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="warning">
+                    <i class="fa-light fa-trash-can"></i>
+                    <span>Delete Account</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="menu-mode">
+                <div class="upper-icon-cont">
+                  <div class="dropdown">
+                    <div class="add-to">
+                      <div class="dropdown-ancor">
+                        <i class="fa-light fa-globe"></i>
+                        <span>eng</span>
+                        <i class="fa-light fa-chevron-down"></i>
+                      </div>
+                      <div class="dropdown-content">
+                        <a class="lang-drop" href="#"
+                          ><span class="lang-flex"
+                            ><img
+                              src="images/flag-en.png"
+                              alt="flag"
+                            />english</span
+                          >
+                          <span class="circle active"></span
+                        ></a>
+                        <a class="lang-drop" href="#"
+                          ><span class="lang-flex"
+                            ><img
+                              src="images/flag-ar.png"
+                              alt="flag"
+                            />arabic</span
+                          >
+                          <span class="circle"></span
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-social">
+                    <span>Follow us :</span>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  </div>
+                </div>
+                <div class="mode">
+                  <input
+                    type="checkbox"
+                    class="darkmode-input"
+                    id="darkmode-toggle"
+                  />
+                  <label for="darkmode-toggle" class="toggle">
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="mode">
+              <input
+                type="checkbox"
+                class="darkmode-input"
+                id="darkmode-toggle"
+              />
+              <label for="darkmode-toggle" class="toggle">
+                <span></span>
+              </label>
+            </div>
+            <div class="header-btn">
+              <a href="sign-in.html" class="first-btn">sign in</a>
+              <a href="sign-up.html" class="second-btn">sign up</a>
+            </div>
+            <!-- show when logged in -->
+            <div class="user-profile dropdown d-none">
+              <div
+                class="user-cont dropdown-toggle"
+                data-bs-toggle="dropdown"
+                role="button"
+                aria-expanded="false"
+              >
+                <div class="user-info">
+                  <img
+                    src="images/profile.png"
+                    class="profile-img"
+                    alt="User-Profile-Image"
+                  />
+                  <div class="profile-user">
+                    <span class="user-welcome">Hello and welcome! 👋</span>
+                    <span class="user-name">Leslie Alexander</span>
+                  </div>
+                  <i class="fa-light fa-chevron-down"></i>
+                </div>
+              </div>
+              <ul class="profile-menu dropdown-menu">
+                <li>
+                  <a href="account.html">
+                    <i class="fa-light fa-circle-user"></i>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-light fa-book"></i>
+                    <span>My History</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <i class="fa-light fa-square-poll-vertical"></i>
+                    <span>Statistics</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="logout">
+                    <i class="fa-light fa-bell"></i>
+                    <span>Notifications</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="warning">
+                    <i class="fa-light fa-right-from-bracket"></i>
+                    <span>Log Out</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="warning">
+                    <i class="fa-light fa-trash-can"></i>
+                    <span>Delete Account</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- show when logged in -->
+
+            <div class="show-icons">
+              <button class="menu-bars" id="menu-id">
+                <i class="fa-light fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header section     -->
+    <!-- main -->
+    <main class="main">
+      <div class="container">
+        <div class="main-cont">
+          <div class="main-caption">
+            <h3 class="main-welcome">
+              <img
+                src="images/main/before.png"
+                class="text-before"
+                alt="icon"
+              />
+              <span>مرحباً بك</span>
+              <img src="images/main/after.png" class="text-after" alt="icon" />
+            </h3>
+            <h2 class="main-text">فى منصة محمد الجربوع</h2>
+            <h1 class="main-p">إبدأ رحلتك فى تطوير أعمالك بكل ثقة</h1>
+          </div>
+          <div class="main-img-cont">
+            <figure class="main-img loading-img">
+              <img class="lazy-img" data-src="images/main/01.png" alt="main" />
+            </figure>
+            <figure class="main-logo">
+              <img src="images/white-logo.png" alt="logo" />
+            </figure>
+            <div class="main-img-content">
+              <h3 class="main-head">
+                إبدأ رحلتك فى تطوير أعمالك بكل ثقة ونجاح
+              </h3>
+              <h4 class="main-title">
+                خدماتنا مجانية <span>للمبتدئين</span>
+                <br />
+                وأصحاب <span>المشاريع الصغيرة</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main -->
+    <div class="container">
+      <!-- القائمة -->
+      <div class="sidebar">
+        <button class="tab-btn active" data-target="profile">
+          الملف الشخصي <span class="arrow rotate">▶</span>
+        </button>
+        <div class="mobile-content">بيانات الملف الشخصي...</div>
+
+        <button class="tab-btn" data-target="history">
+          السجل <span class="arrow">▶</span>
+        </button>
+        <div class="mobile-content">بيانات السجل...</div>
+
+        <button class="tab-btn" data-target="password">
+          كلمة المرور <span class="arrow">▶</span>
+        </button>
+        <div class="mobile-content">تغيير كلمة المرور...</div>
+      </div>
+
+      <!-- منطقة المحتوى الرئيسية (للكبير فقط) -->
+      <div class="content-area">
+        <div class="content active" id="profile">بيانات الملف الشخصي...</div>
+        <div class="content" id="history">بيانات السجل...</div>
+        <div class="content" id="password">تغيير كلمة المرور...</div>
+      </div>
+    </div>
+    <!-- footer section -->
+    <footer>
+      <div class="footer-cont">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-xs-12">
+              <div class="footer-info">
+                <figure class="footer-logo">
+                  <a href="index.html"
+                    ><img
+                      src="images/logo.svg"
+                      class="img-fluid"
+                      alt="img-logo"
+                  /></a>
+                </figure>
+                <p class="footer-right">
+                  Trafikklar – Your trusted platform for driving test
+                  preparation,offeringrealistic questions, clear explanations,
+                  and practice tests to help you succeed and become a safe,
+                  confident driver.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-8 col-xs-12">
+              <div class="row">
+                <div class="col-md-4 col-6">
+                  <div class="nav-foot-cont">
+                    <h2 class="nav-foot-header foot-header">Site sections</h2>
+                    <ul class="nav-foot list-unstyled">
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Home</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">About Us</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Download app</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Driver Tests</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Prices</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Terms of Service</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link"
+                          >Frequently asked questions</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="nav-foot-cont">
+                    <h2 class="nav-foot-header foot-header">Contact us</h2>
+                    <div class="nav-foot">
+                      <ul class="list-unstyled">
+                        <li class="nav-foot-li">
+                          <a href="mailto:blabla.com" class="contact-box">
+                            <span> info.trafikklar.com</span>
+                          </a>
+                        </li>
+                        <li class="nav-foot-li">
+                          <a href="tel:+" class="contact-box">
+                            <span> +47 9123 4567</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                  <div class="nav-foot-cont">
+                    <h2 class="nav-foot-header foot-header">Social media</h2>
+                    <div class="nav-foot">
+                      <div class="social">
+                        <a href="#" class="social-link">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                          <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </div>
+
+                      <div class="download-btn">
+                        <a class="google-btn" href="#" target="_blank"
+                          ><img
+                            src="images/google-btn-light.png"
+                            alt="download-app"
+                        /></a>
+                        <a class="apple-btn" href="#" target="_blank"
+                          ><img
+                            src="images/apple-btn-light.png"
+                            alt="download-app"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copy-name">
+          Copyright © 2025 Trafikklar. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- footer section -->
+    <!-- arrow to top -->
+    <button class="arrow-top">
+      <i class="fa-light fa-arrow-up"></i>
+    </button>
+    <!-- arrow to top -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      const buttons = document.querySelectorAll(".tab-btn");
+      const contents = document.querySelectorAll(".content");
+      const arrows = document.querySelectorAll(".arrow");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const targetId = btn.dataset.target;
+          const targetContent = document.getElementById(targetId);
+          const arrow = btn.querySelector(".arrow");
+
+          if (window.innerWidth > 768) {
+            // 💻 عرض كبير: يظهر فقط المحتوى المطلوب في اليمين
+            buttons.forEach((b) => b.classList.remove("active"));
+            arrows.forEach((a) => a.classList.remove("rotate"));
+            contents.forEach((c) => c.classList.remove("active"));
+
+            btn.classList.add("active");
+            arrow.classList.add("rotate");
+            targetContent.classList.add("active");
+          } else {
+            // 📱 موبايل: فتح وإغلاق العنصر تحته
+            btn.classList.toggle("active");
+            arrow.classList.toggle("rotate");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trafikklar</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body class="fixedHeader">
+    <img src="images/light-bg.svg" alt="bg" class="body-bg" />
+    <!-- preloader -->
+    <div class="preloader">
+      <div class="progress">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <!-- preloader -->
+    <!-- header section -->
+    <header>
+      <div class="top-header">
+        <div class="upper-header">
+          <div class="container">
+            <div class="upper-cont">
+              <div class="upper-icon-cont">
+                <div class="dropdown">
+                  <div class="add-to">
+                    <div class="dropdown-ancor">
+                      <i class="fa-light fa-globe"></i>
+                      <span>eng</span>
+                      <i class="fa-light fa-chevron-down"></i>
+                    </div>
+                    <div class="dropdown-content">
+                      <a class="lang-drop" href="#"
+                        ><span class="lang-flex"
+                          ><img
+                            src="images/flag-en.png"
+                            alt="flag"
+                          />english</span
+                        >
+                        <span class="circle active"></span
+                      ></a>
+                      <a class="lang-drop" href="#"
+                        ><span class="lang-flex"
+                          ><img
+                            src="images/flag-ar.png"
+                            alt="flag"
+                          />arabic</span
+                        >
+                        <span class="circle"></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-social">
+                  <span>Follow us :</span>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="nav-header">
+            <figure class="img-logo">
+              <a href="index.html"
+                ><img src="images/logo.svg" class="img-fluid"
+              /></a>
+            </figure>
+            <div class="navgition">
+              <div class="nav-head">
+                <span>side menu</span>
+                <button class="close-menu">
+                  <i class="fa-light fa-circle-x"></i>
+                </button>
+              </div>
+              <ul class="big-menu list-unstyled">
+                <li>
+                  <a href="index.html" class="active"> home </a>
+                </li>
+                <li>
+                  <a href="#"> About Us</a>
+                </li>
+                <li>
+                  <a href="#"> Driver Tests </a>
+                </li>
+                <li>
+                  <a href="#"> Contact us</a>
+                </li>
+                <li>
+                  <a href="#"> Prices</a>
+                </li>
+              </ul>
+              <div class="header-btn menu-btn">
+                <a href="sign-in.html" class="first-btn">sign in</a>
+                <a href="sign-up.html" class="second-btn">sign up</a>
+              </div>
+              <ul class="profile-menu menu-profile">
+                <li>
+                  <a href="account.html">
+                    <i class="fa-light fa-circle-user"></i>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-light fa-book"></i>
+                    <span>My History</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <i class="fa-light fa-square-poll-vertical"></i>
+                    <span>Statistics</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="logout">
+                    <i class="fa-light fa-bell"></i>
+                    <span>Notifications</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="warning">
+                    <i class="fa-light fa-right-from-bracket"></i>
+                    <span>Log Out</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="warning">
+                    <i class="fa-light fa-trash-can"></i>
+                    <span>Delete Account</span>
+                  </a>
+                </li>
+              </ul>
+              <div class="menu-mode">
+                <div class="upper-icon-cont">
+                  <div class="dropdown">
+                    <div class="add-to">
+                      <div class="dropdown-ancor">
+                        <i class="fa-light fa-globe"></i>
+                        <span>eng</span>
+                        <i class="fa-light fa-chevron-down"></i>
+                      </div>
+                      <div class="dropdown-content">
+                        <a class="lang-drop" href="#"
+                          ><span class="lang-flex"
+                            ><img
+                              src="images/flag-en.png"
+                              alt="flag"
+                            />english</span
+                          >
+                          <span class="circle active"></span
+                        ></a>
+                        <a class="lang-drop" href="#"
+                          ><span class="lang-flex"
+                            ><img
+                              src="images/flag-ar.png"
+                              alt="flag"
+                            />arabic</span
+                          >
+                          <span class="circle"></span
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-social">
+                    <span>Follow us :</span>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  </div>
+                </div>
+                <div class="mode">
+                  <input
+                    type="checkbox"
+                    class="darkmode-input"
+                    id="darkmode-toggle"
+                  />
+                  <label for="darkmode-toggle" class="toggle">
+                    <span></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="mode">
+              <input
+                type="checkbox"
+                class="darkmode-input"
+                id="darkmode-toggle"
+              />
+              <label for="darkmode-toggle" class="toggle">
+                <span></span>
+              </label>
+            </div>
+            <div class="header-btn">
+              <a href="sign-in.html" class="first-btn">sign in</a>
+              <a href="sign-up.html" class="second-btn">sign up</a>
+            </div>
+            <!-- show when logged in -->
+            <div class="user-profile dropdown d-none">
+              <div
+                class="user-cont dropdown-toggle"
+                data-bs-toggle="dropdown"
+                role="button"
+                aria-expanded="false"
+              >
+                <div class="user-info">
+                  <img
+                    src="images/profile.png"
+                    class="profile-img"
+                    alt="User-Profile-Image"
+                  />
+                  <div class="profile-user">
+                    <span class="user-welcome">Hello and welcome! 👋</span>
+                    <span class="user-name">Leslie Alexander</span>
+                  </div>
+                  <i class="fa-light fa-chevron-down"></i>
+                </div>
+              </div>
+              <ul class="profile-menu dropdown-menu">
+                <li>
+                  <a href="account.html">
+                    <i class="fa-light fa-circle-user"></i>
+                    <span>My Account</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-light fa-book"></i>
+                    <span>My History</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!">
+                    <i class="fa-light fa-square-poll-vertical"></i>
+                    <span>Statistics</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="logout">
+                    <i class="fa-light fa-bell"></i>
+                    <span>Notifications</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="warning">
+                    <i class="fa-light fa-right-from-bracket"></i>
+                    <span>Log Out</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#!" class="warning">
+                    <i class="fa-light fa-trash-can"></i>
+                    <span>Delete Account</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- show when logged in -->
+
+            <div class="show-icons">
+              <button class="menu-bars" id="menu-id">
+                <i class="fa-light fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header section     -->
+    <!-- main -->
+    <main class="main">
+      <div class="container">
+        <div class="main-cont">
+          <div class="main-caption">
+            <h1 class="main-title">Master Your Driving Test</h1>
+            <p class="main-pargh">
+              Get ready for your driving license with comprehensive practice
+              tests, detailed explanations, and real-world simulations. Our
+              platform helps you learn traffic signs, rules, and driving skills
+              step by step, so you can pass your exam with ease and become a
+              confident driver.
+            </p>
+            <div class="main-flex">
+              <span class="main-text"
+                >Trusted by thousands of drivers worldwide .</span
+              >
+              <img src="images/people-img.png" alt="people-img" />
+            </div>
+            <div class="main-btn-cont">
+              <a href="#" class="custom-btn"
+                >Start Now<i class="fa-light fa-arrow-right"></i
+              ></a>
+              <a href="#" class="ancor-link">Learn more </a>
+            </div>
+          </div>
+          <div class="main-img-cont">
+            <figure class="main-img">
+              <img loading="lazy" src="images/main-img.png" alt="main-img" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- main -->
+    <!-- about-us section -->
+    <section class="about-us">
+      <div class="container">
+        <div class="section-cont">
+          <div class="section-content">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-pargh">
+              Welcome to Trafikklar, your trusted platform for driving test
+              preparation. We offer a comprehensive learning experience with
+              realistic questions, clear explanations, and practice tests to
+              help you pass your driving exam confidently. Our goal is to
+              empower you to drive safely and responsibly.
+            </p>
+            <a href="#" class="ancor-link">Learn more </a>
+          </div>
+          <div class="section-img-cont">
+            <figure class="main-img">
+              <img loading="lazy" src="images/about-img.png" alt="main-img" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about-us section -->
+    <!-- tests-section  -->
+    <section class="tests-section">
+      <div class="container">
+        <div class="section-content">
+          <h2 class="section-title">Driver Tests</h2>
+          <p class="section-pargh">
+            At Trafikklar, we provide a variety of practical and theoretical
+            driving tests to help you assess your readiness before the official
+            exam. Our tests include realistic questions covering traffic rules,
+            road signs, and driving scenarios, so you can practice confidently
+            and be fully prepared.
+          </p>
+        </div>
+        <div class="tests-grid">
+          <div class="tests-item">
+            <figure><img src="images/tests/01.png" alt="image-test" /></figure>
+            <h2>Taxi Test</h2>
+            <p>Practice questions to prepare for the car driving exam.</p>
+            <a href="#" class="custom-btn"
+              >Start Now<i class="fa-light fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="tests-item">
+            <figure><img src="images/tests/02.png" alt="image-test" /></figure>
+            <h2>bus Test</h2>
+            <p>Practice questions to prepare for the car driving exam.</p>
+            <a href="#" class="custom-btn"
+              >Start Now<i class="fa-light fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="tests-item">
+            <figure><img src="images/tests/03.png" alt="image-test" /></figure>
+            <h2>Motorcycle Test Test</h2>
+            <p>Practice questions to prepare for the car driving exam.</p>
+            <a href="#" class="custom-btn"
+              >Start Now<i class="fa-light fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- tests-section  -->
+    <!-- skills.section -->
+    <section class="skills-section">
+      <div class="container">
+        <div class="section-cont">
+          <div class="section-content">
+            <h2 class="section-title">Trafikklar – Driver Skills Assessment</h2>
+            <p class="section-pargh">
+              Trafikklar helps drivers test and improve their driving skills,
+              reaction time, and navigation accuracy quickly and safely
+            </p>
+            <ul class="skills-ul">
+              <li>Download our app</li>
+              <li>Explore and Sign Up</li>
+              <li>Test driving precision and decision-making.</li>
+              <li>User-Friendly Interface – Quick and easy test start.</li>
+              <li>Track Progress and Celebrate Achievements</li>
+              <li>Stay Connected & Enjoy the Benefits of Trafikklar</li>
+            </ul>
+            <div class="download-btn">
+              <a class="google-btn" href="#" target="_blank"
+                ><img src="images/google-btn-light.png" alt="download-app"
+              /></a>
+              <a class="apple-btn" href="#" target="_blank"
+                ><img src="images/apple-btn-light.png" alt="download-app"
+              /></a>
+            </div>
+          </div>
+          <div class="skills-img">
+            <figure class="main-img">
+              <img
+                loading="lazy"
+                src="images/mobile-img.png"
+                alt="mobile-img"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skills.section -->
+    <!-- footer section -->
+    <footer>
+      <div class="footer-cont">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-xs-12">
+              <div class="footer-info">
+                <figure class="footer-logo">
+                  <a href="index.html"
+                    ><img
+                      src="images/logo.svg"
+                      class="img-fluid"
+                      alt="img-logo"
+                  /></a>
+                </figure>
+                <p class="footer-right">
+                  Trafikklar – Your trusted platform for driving test
+                  preparation,offeringrealistic questions, clear explanations,
+                  and practice tests to help you succeed and become a safe,
+                  confident driver.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-8 col-xs-12">
+              <div class="row">
+                <div class="col-md-4 col-6">
+                  <div class="nav-foot-cont">
+                    <h2 class="nav-foot-header foot-header">Site sections</h2>
+                    <ul class="nav-foot list-unstyled">
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Home</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">About Us</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Download app</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Driver Tests</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Prices</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link">Terms of Service</a>
+                      </li>
+                      <li class="nav-foot-li">
+                        <a href="#" class="nav-foot-link"
+                          >Frequently asked questions</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="nav-foot-cont">
+                    <h2 class="nav-foot-header foot-header">Contact us</h2>
+                    <div class="nav-foot">
+                      <ul class="list-unstyled">
+                        <li class="nav-foot-li">
+                          <a href="mailto:blabla.com" class="contact-box">
+                            <span> info.trafikklar.com</span>
+                          </a>
+                        </li>
+                        <li class="nav-foot-li">
+                          <a href="tel:+" class="contact-box">
+                            <span> +47 9123 4567</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                  <div class="nav-foot-cont">
+                    <h2 class="nav-foot-header foot-header">Social media</h2>
+                    <div class="nav-foot">
+                      <div class="social">
+                        <a href="#" class="social-link">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                          <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </div>
+
+                      <div class="download-btn">
+                        <a class="google-btn" href="#" target="_blank"
+                          ><img
+                            src="images/google-btn-light.png"
+                            alt="download-app"
+                        /></a>
+                        <a class="apple-btn" href="#" target="_blank"
+                          ><img
+                            src="images/apple-btn-light.png"
+                            alt="download-app"
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copy-name">
+          Copyright © 2025 Trafikklar. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- footer section -->
+    <!-- arrow to top -->
+    <button class="arrow-top">
+      <i class="fa-light fa-arrow-up"></i>
+    </button>
+    <!-- arrow to top -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,450 @@
+.content-section {
+  min-height: 20vh;
+  padding-top: 156px;
+  @include max-991 {
+    padding-top: 60px;
+  }
+}
+.content-section-title {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, #4f6ef7, #a87fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-transform: capitalize;
+  text-align: center;
+  gap: 12px;
+  @include max-991 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
+.content-section-pargh {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: $text-sec;
+  max-width: 1040px;
+  margin: 0 auto;
+  margin-bottom: 42px;
+  @include max-991 {
+    font-size: 12px;
+    margin-bottom: 32px;
+  }
+}
+.pricing-cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.pricing-item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: $background;
+  border: 1px solid $border;
+  padding: 32px 16px;
+  .dark-mode {
+    border-color: #ffffff33;
+  }
+  @include max-991 {
+    padding: 24px 16px;
+  }
+  &.active {
+    background: linear-gradient(143.12deg, #4f6ef7 0.57%, #a87fff 99.36%);
+    border-color: transparent;
+  }
+}
+.pricing-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 20px;
+  @include max-991 {
+    fmb: 16px;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 18px;
+    color: $primary;
+    @include max-991 {
+      font-size: 16px;
+    }
+    .active & {
+      color: $white;
+    }
+  }
+  .pricing-custom {
+    @include flexCenter;
+    background-color: #ed8a0a1a;
+    height: 38px;
+    border-radius: 20px;
+    padding: 0 12px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #ed8a0a;
+    @include max-991 {
+      font-size: 12px;
+    }
+  }
+}
+.pricing-price {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 24px;
+  .price {
+    font-weight: 600;
+    font-size: 32px;
+    color: $main;
+    @include max-991 {
+      font-size: 18px;
+    }
+    .active & {
+      color: $white;
+    }
+  }
+  .period {
+    font-weight: 400;
+    font-size: 16px;
+    color: $input-text;
+    @include max-991 {
+      font-size: 14px;
+    }
+    .active & {
+      color: $white;
+    }
+  }
+}
+.custom-ancor {
+  width: 100%;
+  height: 52px;
+  border-radius: 8px;
+  text-transform: capitalize;
+  @include flexCenter;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  @include tr;
+  outline: none !important;
+  text-decoration: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    padding: 1px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #a87fff 0%, #4f6ef7 100%);
+    mask: linear-gradient(#000 0 0) exclude,
+      linear-gradient(#000 0 0) content-box;
+  }
+  &:hover {
+    color: $main;
+    opacity: 0.8;
+  }
+  @include max-991 {
+    height: 48px;
+    font-size: 14px;
+  }
+  .active & {
+    background-color: $white;
+    color: $main;
+    &::after {
+      display: none;
+    }
+  }
+}
+.pricing-list {
+  margin: 0;
+  margin-top: 32px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #191d23;
+    .dark-mode & {
+      color: #c2c2c2;
+      .active & {
+        color: $white;
+      }
+    }
+    .active & {
+      color: $white;
+    }
+    &:before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Pro";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: rgba($color: #4f6ef7, $alpha: 0.5);
+      @include flexCenter;
+      font-size: 10px;
+      color: $main;
+      .dark-mode &,
+      .active & {
+        background-color: rgba($color: #fff, $alpha: 0.5);
+        color: $white;
+      }
+    }
+    @include max-991 {
+      font-size: 14px;
+    }
+  }
+}
+/*payment-page*/
+.payment-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 32px;
+  @include max-991 {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+}
+.payment-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: $link-text;
+  margin-bottom: 16px;
+  @include max-991 {
+    font-size: 16px;
+  }
+}
+.payment-cont {
+  width: 100%;
+  overflow: hidden;
+  .custom-btn {
+    width: 100%;
+  }
+  .check-width {
+    width: 100%;
+  }
+  .check-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .check-label {
+    width: 100%;
+    height: 72px;
+    background-color: $background;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 12px;
+    margin-bottom: 0;
+    border: 1px solid $line-color;
+    @include tr;
+    @include max-991 {
+      height: 56px;
+    }
+    .dark-mode & {
+      border-color: $border;
+    }
+    @include tr;
+    .checkmark {
+      position: relative;
+    }
+  }
+  .payment-radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 14px;
+  }
+  .check-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: $link-text;
+    @include max-991 {
+      font-size: 14px;
+    }
+  }
+  .ship-cont {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+.check-width {
+  max-width: 100%;
+}
+.check-label input[type="checkbox"],
+.check-label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.check-label .checkmark {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid $border;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.check-label input[type="checkbox"] ~ .checkmark {
+  border-radius: 4.5px;
+  width: 18px;
+  height: 18px;
+}
+.check-label:hover input ~ .checkmark {
+  background-color: transparent;
+  border-color: $main;
+  transition: all 0.3s ease-in-out;
+}
+.check-label input:checked ~ .checkmark {
+  background-color: $main;
+}
+
+.check-label:has(input:checked) {
+  border: 2px dotted $background;
+  background: linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(90deg, #4f6ef7 0%, #a87fff 100%);
+  .dark-mode & {
+    border: 2px dotted $background;
+    background: linear-gradient(#000 0 0) padding-box,
+      linear-gradient(90deg, #4f6ef7 0%, #a87fff 100%);
+  }
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  visibility: visible;
+}
+.check-label input:checked ~ .checkmark:after {
+  opacity: 1;
+  visibility: visible;
+}
+.check-label input:checked ~ .checkmark {
+  background-color: transparent;
+  border-color: $main;
+}
+.check-label input:checked ~ .custom-checkmark {
+  background-color: transparent;
+  border-color: $main;
+}
+.check-label .checkmark:after {
+  content: "";
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: $main;
+}
+.check-label .custom-checkmark:after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 14px;
+  color: $white;
+  border-radius: 4.5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-total-box {
+  border: 1px solid $line-color;
+  background-color: $background;
+  border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
+  text-align: start;
+  height: max-content;
+  padding: 14px 0;
+}
+.total-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0 16px 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid $sec;
+  font-weight: 600;
+  font-size: 18px;
+  color: $link-text;
+  @include max-991 {
+    font-size: 16px;
+  }
+  i {
+    @include flexCenter;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    background-color: #a87fff;
+    border-radius: 12px;
+    color: $white;
+    @include max-991 {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+.total-ckeckout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 10px 16px;
+  font-weight: 500;
+  font-size: 16px;
+  color: $text;
+  text-transform: capitalize;
+  @include max-991 {
+    font-size: 14px;
+  }
+  .total-num {
+    color: $primary;
+  }
+  .dark-mode & {
+    color: $input-text;
+  }
+  &.final {
+    .total-num {
+      background: linear-gradient(90deg, #4f6ef7, #a87fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+}
