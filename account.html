@@ -26,99 +26,15 @@
     <link href="css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/select2.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
-    <style>
-      /* Sidebar */
-      .sidebar {
-        width: 220px;
-        flex-shrink: 0;
-      }
-
-      .tab-btn {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 10px 12px;
-        margin-bottom: 6px;
-        border: none;
-        background: #f5f5f5;
-        cursor: pointer;
-        border-radius: 6px;
-        transition: 0.3s;
-      }
-
-      .tab-btn.active {
-        background: linear-gradient(90deg, #7b61ff, #9b76ff);
-        color: #fff;
-      }
-
-      .arrow {
-        transition: transform 0.3s ease;
-      }
-      .arrow.rotate {
-        transform: rotate(90deg);
-      }
-
-      /* Content area */
-      .content-area {
-        flex: 1;
-        padding: 1rem;
-        background: #fafafa;
-        border-radius: 8px;
-        min-height: 200px;
-      }
-
-      .content {
-        display: none;
-      }
-      .content.active {
-        display: block;
-        animation: fadeIn 0.3s ease;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      /* Mobile layout */
-      @media (max-width: 768px) {
-        .container {
-          flex-direction: column;
-        }
-
-        .sidebar {
-          width: 100%;
-        }
-
-        .content-area {
-          display: none; /* نخفي منطقة المحتوى المنفصلة */
-        }
-
-        /* نعرض المحتوى تحت الزر */
-        .tab-btn + .mobile-content {
-          display: none;
-          padding: 10px;
-          border-top: 1px solid #eee;
-          background: #fff;
-          border-radius: 0 0 6px 6px;
-        }
-
-        .tab-btn.active + .mobile-content {
-          display: block;
-        }
-      }
-    </style>
   </head>
 
-  <body class="fixedHeader">
-    <img src="images/light-bg.svg" alt="bg" class="body-bg" />
+  <body class="fixedHeader internal-page">
+    <!-- <img src="images/light-bg.svg" alt="bg" class="body-bg" /> -->
     <!-- preloader -->
     <div class="preloader">
       <div class="progress">
@@ -228,7 +144,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#!" class="logout">
+                  <a href="#!">
                     <i class="fa-light fa-bell"></i>
                     <span>Notifications</span>
                   </a>
@@ -307,12 +223,12 @@
                 <span></span>
               </label>
             </div>
-            <div class="header-btn">
+            <div class="header-btn d-none">
               <a href="sign-in.html" class="first-btn">sign in</a>
               <a href="sign-up.html" class="second-btn">sign up</a>
             </div>
             <!-- show when logged in -->
-            <div class="user-profile dropdown d-none">
+            <div class="user-profile dropdown">
               <div
                 class="user-cont dropdown-toggle"
                 data-bs-toggle="dropdown"
@@ -352,7 +268,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#!" class="logout">
+                  <a href="#!">
                     <i class="fa-light fa-bell"></i>
                     <span>Notifications</span>
                   </a>
@@ -383,71 +299,209 @@
       </div>
     </header>
     <!-- header section     -->
-    <!-- main -->
-    <main class="main">
+    <!-- account-section -->
+    <div class="account-section">
       <div class="container">
-        <div class="main-cont">
-          <div class="main-caption">
-            <h3 class="main-welcome">
-              <img
-                src="images/main/before.png"
-                class="text-before"
-                alt="icon"
-              />
-              <span>مرحباً بك</span>
-              <img src="images/main/after.png" class="text-after" alt="icon" />
-            </h3>
-            <h2 class="main-text">فى منصة محمد الجربوع</h2>
-            <h1 class="main-p">إبدأ رحلتك فى تطوير أعمالك بكل ثقة</h1>
-          </div>
-          <div class="main-img-cont">
-            <figure class="main-img loading-img">
-              <img class="lazy-img" data-src="images/main/01.png" alt="main" />
-            </figure>
-            <figure class="main-logo">
-              <img src="images/white-logo.png" alt="logo" />
-            </figure>
-            <div class="main-img-content">
-              <h3 class="main-head">
-                إبدأ رحلتك فى تطوير أعمالك بكل ثقة ونجاح
-              </h3>
-              <h4 class="main-title">
-                خدماتنا مجانية <span>للمبتدئين</span>
-                <br />
-                وأصحاب <span>المشاريع الصغيرة</span>
-              </h4>
+        <div class="account-container">
+          <div class="sidebar">
+            <div class="account-box">
+              <div class="user-account">
+                <img
+                  src="images/profile.png"
+                  class="profile-img"
+                  alt="User-Profile-Image"
+                />
+                <div class="profile-user">
+                  <span class="user-name">Leslie Alexander</span>
+                  <span class="user-email">example@gmail.com</span>
+                </div>
+                <img
+                  src="images/traffic-light.png"
+                  alt="img"
+                  class="account-light"
+                />
+              </div>
+              <div class="account-p">
+                <div class="hours-cont">
+                  <div class="hours-flex">
+                    <span>Number of hours</span>
+                    <span class="hours">2h 15m</span>
+                  </div>
+                  <div class="hours-progess">
+                    <span style="width: 25%"></span>
+                  </div>
+                </div>
+                <a href="#" class="ancor-style">
+                  lets start<i class="fa-light fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
+            <h4 class="account-title">My Account</h4>
+            <div class="sidebar-container">
+              <ul class="sidebar-menu">
+                <li>
+                  <button class="side-btn tab-btn active" data-target="profile">
+                    <i class="fa-light fa-circle-user"></i>
+                    <span>Edit Profile</span>
+                    <span class="arrow rotate"
+                      ><i class="fa-light fa-chevron-down"></i
+                    ></span>
+                  </button>
+                </li>
+                <li>
+                  <button class="side-btn tab-btn" data-target="history">
+                    <i class="fa-light fa-book"></i>
+                    <span>My History</span>
+                    <span class="arrow rotate"
+                      ><i class="fa-light fa-chevron-down"></i
+                    ></span>
+                  </button>
+                </li>
+                <li>
+                  <button class="side-btn tab-btn" data-target="password">
+                    <i class="fa-light fa-lock-keyhole"></i>
+                    <span>Change Password</span>
+                    <span class="arrow rotate"
+                      ><i class="fa-light fa-chevron-down"></i
+                    ></span>
+                  </button>
+                </li>
+                <li>
+                  <button class="side-btn tab-btn" data-target="Statistics">
+                    <i class="fa-light fa-square-poll-vertical"></i>
+                    <span>Statistics</span>
+                    <span class="arrow rotate"
+                      ><i class="fa-light fa-chevron-down"></i
+                    ></span>
+                  </button>
+                </li>
+                <li>
+                  <button class="side-btn">
+                    <i class="fa-light fa-bell"></i>
+                    <span>Notifications</span>
+                  </button>
+                </li>
+                <li class="line">
+                  <span></span>
+                </li>
+                <li>
+                  <button class="side-btn warning">
+                    <i class="fa-light fa-right-from-bracket"></i>
+                    <span>Log Out</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="side-btn warning">
+                    <i class="fa-light fa-trash-can"></i>
+                    <span>Delete Account</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- content for all account setting-->
+          <div class="content-area">
+            <div class="content active" id="profile">
+              <form action="">
+                <div class="image-upload">
+                  <div id="image-background" style="background-image: url()">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onchange="updateImage()"
+                      id="js-imageUpload"
+                    />
+                    <i class="fa-light fa-image"></i>
+                    <div class="upload-btn">
+                      <i class="fa-light fa-arrow-up-from-arc"></i> Upload Photo
+                    </div>
+                  </div>
+                  <span class="upload-text"
+                    >Image size should be under 1MB and image ration needs to be
+                    1:1</span
+                  >
+
+                  <script>
+                    function updateImage() {
+                      var imageBG = document.querySelector("#image-background"),
+                        file =
+                          document.querySelector("#js-imageUpload").files[0],
+                        reader = new FileReader();
+
+                      reader.onloadend = function () {
+                        imageBG.style.backgroundImage =
+                          "url(" + reader.result + ")";
+                      };
+
+                      if (file) reader.readAsDataURL(file);
+                      else imageBG.style.backgroundImage = "";
+                    }
+                  </script>
+                </div>
+                <div class="form-account">
+                  <div class="form-flex">
+                    <div class="form-group">
+                      <label class="form-label required">First Name</label>
+                      <div class="form-input-relative">
+                        <span class="icon-placeholder">
+                          <i class="fa-light fa-user"></i>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-input"
+                          placeholder="name"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label required">Last Name</label>
+                      <div class="form-input-relative">
+                        <span class="icon-placeholder">
+                          <i class="fa-light fa-user"></i>
+                        </span>
+                        <input
+                          type="text"
+                          class="form-input"
+                          placeholder="name"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label required">Email</label>
+                    <div class="form-input-relative">
+                      <span class="icon-placeholder">
+                        <i class="fa-light fa-envelope"></i>
+                      </span>
+                      <input
+                        type="email"
+                        class="form-input"
+                        placeholder="example@gmail.com"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label required">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="form-input phone"
+                      placeholder="*******"
+                    />
+                  </div>
+                  <div class="form-btn-cont">
+                    <button class="form-btn" type="submit">Confirm</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="content" id="history">بيانات السجل...</div>
+            <div class="content" id="password">تغيير كلمة المرور...</div>
           </div>
         </div>
       </div>
-    </main>
-    <!-- main -->
-    <div class="container">
-      <!-- القائمة -->
-      <div class="sidebar">
-        <button class="tab-btn active" data-target="profile">
-          الملف الشخصي <span class="arrow rotate">▶</span>
-        </button>
-        <div class="mobile-content">بيانات الملف الشخصي...</div>
-
-        <button class="tab-btn" data-target="history">
-          السجل <span class="arrow">▶</span>
-        </button>
-        <div class="mobile-content">بيانات السجل...</div>
-
-        <button class="tab-btn" data-target="password">
-          كلمة المرور <span class="arrow">▶</span>
-        </button>
-        <div class="mobile-content">تغيير كلمة المرور...</div>
-      </div>
-
-      <!-- منطقة المحتوى الرئيسية (للكبير فقط) -->
-      <div class="content-area">
-        <div class="content active" id="profile">بيانات الملف الشخصي...</div>
-        <div class="content" id="history">بيانات السجل...</div>
-        <div class="content" id="password">تغيير كلمة المرور...</div>
-      </div>
     </div>
+    <!-- account-section -->
     <!-- footer section -->
     <footer>
       <div class="footer-cont">
@@ -575,11 +629,14 @@
     <!-- arrow to top -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="js/script.js"></script>
     <script>
       const buttons = document.querySelectorAll(".tab-btn");
       const contents = document.querySelectorAll(".content");
       const arrows = document.querySelectorAll(".arrow");
+      const sidebar = document.querySelector(".sidebar-menu");
+      let lastInjected = null;
 
       buttons.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -587,20 +644,45 @@
           const targetContent = document.getElementById(targetId);
           const arrow = btn.querySelector(".arrow");
 
-          if (window.innerWidth > 768) {
-            // 💻 عرض كبير: يظهر فقط المحتوى المطلوب في اليمين
+          // 💻 الوضع العادي (ديسكتوب)
+          if (window.innerWidth > 991) {
             buttons.forEach((b) => b.classList.remove("active"));
-            arrows.forEach((a) => a.classList.remove("rotate"));
             contents.forEach((c) => c.classList.remove("active"));
+            arrows.forEach((a) => a.classList.remove("rotate"));
 
             btn.classList.add("active");
-            arrow.classList.add("rotate");
             targetContent.classList.add("active");
-          } else {
-            // 📱 موبايل: فتح وإغلاق العنصر تحته
-            btn.classList.toggle("active");
-            arrow.classList.toggle("rotate");
+            arrow.classList.add("rotate");
+            return;
           }
+
+          // 📱 الوضع الموبايل
+          // لو فيه محتوى متحقن من قبل، احذفه
+          if (lastInjected && lastInjected.parentNode) {
+            lastInjected.remove();
+          }
+
+          // لو نفس الزرار اضغط تاني → يقفل المحتوى
+          if (btn.classList.contains("open")) {
+            btn.classList.remove("open");
+            arrow.classList.remove("rotate");
+            return;
+          }
+
+          // اقفل أي زرار مفتوح تاني
+          buttons.forEach((b) => b.classList.remove("open"));
+          arrows.forEach((a) => a.classList.remove("rotate"));
+
+          // افتح الجديد
+          btn.classList.add("open");
+          arrow.classList.add("rotate");
+
+          // انسخ المحتوى من الـ content-area وضيفه بعد الزرار
+          const clone = targetContent.cloneNode(true);
+          clone.classList.add("injected-content");
+          clone.classList.add("active");
+          btn.parentNode.insertBefore(clone, btn.nextSibling);
+          lastInjected = clone;
         });
       });
     </script>

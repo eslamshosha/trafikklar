@@ -1,0 +1,403 @@
+.account-section {
+  padding-top: 60px;
+  min-height: 20vh;
+}
+
+.account-container {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 32px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+  }
+}
+.account-box {
+  border: 1px solid $border;
+  padding: 16px 0;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  position: relative;
+  .dark-mode & {
+    border-color: #ffffff1a;
+  }
+}
+.user-account {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 0 16px 16px;
+  border-bottom: 1px solid $border;
+  margin-bottom: 20px;
+  .dark-mode & {
+    border-color: #ffffff1a;
+  }
+  .profile-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #a87fff 0%, #4f6ef7 100%);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    @include max-991 {
+      width: 38px;
+      height: 38px;
+    }
+  }
+  .profile-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    .user-email {
+      font-weight: 600;
+      font-size: 14px;
+      color: $input-text;
+      .dark-mode & {
+        color: #ededed;
+      }
+    }
+    .user-name {
+      font-weight: 500;
+      font-size: 14px;
+      color: $main;
+    }
+  }
+  .account-light {
+    max-width: 33px;
+    position: absolute;
+    top: 5px;
+    inset-inline-end: 5px;
+  }
+  .user-profile .user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.account-p {
+  padding: 0 16px;
+}
+.hours-cont {
+  margin-bottom: 20px;
+}
+.hours-flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: $link-text;
+  margin-bottom: 12px;
+  .hours {
+    font-weight: 600;
+    font-size: 14px;
+    color: $main;
+  }
+}
+.hours-progess {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $back;
+  .dark-mode & {
+    background-color: $sec;
+  }
+  span {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #4f6ef7 0%, #a87fff 100%);
+    border-radius: 3px;
+  }
+}
+.ancor-style {
+  @include flexCenter;
+  gap: 8px;
+  width: 100%;
+  height: 52px;
+  // padding: 22px 0;
+  border-radius: 8px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  @include tr;
+  outline: none !important;
+  border: none;
+  text-decoration: none;
+  overflow: hidden;
+  background: #edf1fe;
+  color: $main;
+  .dark-mode & {
+    background-color: #edf1fe33;
+  }
+  i {
+    font-size: 14px;
+  }
+  &:hover {
+    background: $main;
+    color: $white;
+  }
+}
+.account-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+  color: $link-text;
+  text-align: start;
+}
+.sidebar-container {
+  border: 1px solid $border;
+  padding: 16px 0;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  position: relative;
+  .dark-mode & {
+    border-color: #ffffff1a;
+  }
+  .line span {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: $border;
+    .dark-mode & {
+      background-color: #ffffff1a;
+    }
+  }
+  @include max-991 {
+    border: none;
+    padding: 0;
+  }
+}
+/* Sidebar */
+.sidebar {
+  flex-shrink: 0;
+}
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+  margin: 0;
+  list-style-type: none;
+  .mobile-content {
+    display: none;
+  }
+}
+li {
+  padding: 0 16px;
+  &.line {
+    padding: 0;
+  }
+  @include max-991 {
+    padding: 0;
+  }
+}
+.side-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  color: $link-text;
+  &.warning {
+    color: #f54141;
+  }
+  i {
+    font-size: 22px;
+    @include max-991 {
+      display: none;
+    }
+  }
+  @include tr;
+  @include max-991 {
+    justify-content: space-between;
+  }
+  .arrow {
+    display: none;
+    @include max-991 {
+      display: inline-block;
+      i {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.tab-btn.active {
+  background: linear-gradient(90deg, #a87fff 0%, #4f6ef7 100%);
+  color: $white;
+  @include max-991 {
+    background: transparent;
+    color: $link-text;
+  }
+}
+@include max-991 {
+  .tab-btn.open {
+    background: linear-gradient(90deg, #a87fff 0%, #4f6ef7 100%);
+    color: $white;
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+  }
+}
+.open .arrow.rotate {
+  transform: rotate(180deg);
+}
+@media (max-width: 991px) {
+  .injected-content {
+    margin-top: 16px;
+    @include tr;
+  }
+}
+/* Content area */
+.content-area {
+  flex: 1;
+  .form-input {
+    background-color: #f8f8f8;
+    .dark-mode & {
+      background-color: $sec;
+    }
+  }
+}
+
+.content {
+  display: none;
+}
+.content.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .content-area {
+    display: none; /* نخفي منطقة المحتوى المنفصلة */
+  }
+
+  /* نعرض المحتوى تحت الزر */
+  .tab-btn + .mobile-content {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    background: #fff;
+    border-radius: 0 0 6px 6px;
+  }
+
+  .tab-btn.active + .mobile-content {
+    display: block;
+  }
+}
+.image-upload {
+  border: 1px solid $back;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  max-width: 255px;
+  margin-bottom: 32px;
+  .dark-mode & {
+    border-color: #ffffff1a;
+  }
+}
+#image-background {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  aspect-ratio: 231/200;
+  max-height: 200x;
+  border-radius: 12px;
+  background-color: #f8f8f8;
+  margin-bottom: 12px;
+  .dark-mode & {
+    background-color: $sec;
+  }
+  overflow: hidden;
+  position: relative;
+  @include flexCenter;
+  cursor: pointer;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+  }
+  i.fa-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    @include flexCenter;
+    background-color: $white;
+    border: 1px solid #edf1fe;
+    .dark-mode & {
+      border-color: #ffffff1a;
+      background-color: transparent;
+      color: $white;
+    }
+    font-size: 16px;
+    color: $main;
+    user-select: none;
+    pointer-events: none;
+  }
+}
+.upload-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $main;
+  color: $white;
+  padding: 8px;
+  @include flexCenter;
+  font-weight: 500;
+  font-size: 10px;
+  gap: 8px;
+  i {
+    font-size: 15px;
+  }
+  user-select: none;
+  pointer-events: none;
+}
+.upload-text {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  color: $input-text;
+  .dark-mode & {
+    color: #c2c2c2;
+  }
+}
