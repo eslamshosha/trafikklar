@@ -495,8 +495,204 @@
                 </div>
               </form>
             </div>
-            <div class="content" id="history">بيانات السجل...</div>
-            <div class="content" id="password">تغيير كلمة المرور...</div>
+            <div class="content" id="history">
+              <div class="history-header">
+                <span class="history-icon"
+                  ><img src="images/History.svg" alt="history-icon"
+                /></span>
+                <div class="history-flex">
+                  <span class="history-head">Recent Tests </span>
+                  <span class="history-num">6 Completed</span>
+                </div>
+              </div>
+              <div class="history-items">
+                <div class="history-item">
+                  <div class="history-info">
+                    <div class="history-info-flex">
+                      <span class="history-test-icon"
+                        ><i class="fa-regular fa-car"></i
+                      ></span>
+                      <div class="history-span">
+                        <span class="history-name">Card Test</span>
+                        <span class="history-date"
+                          ><i class="fa-light fa-calendar-days"></i>
+                          <span>Dec , 15 ,2025</span></span
+                        >
+                      </div>
+                    </div>
+                    <div class="history-result success">98%</div>
+                  </div>
+                  <div class="history-answer">
+                    <div class="answer right">
+                      <div class="answer-flex">
+                        <i class="fa-light fa-circle-check"></i>
+                        Correct
+                      </div>
+                      <span class="counter"><span>38</span> / 40</span>
+                    </div>
+                    <div class="answer wrong">
+                      <div class="answer-flex">
+                        <i class="fa-light fa-circle-xmark"></i>
+                        Wrong
+                      </div>
+                      <span class="counter"><span>2</span> / 40</span>
+                    </div>
+                  </div>
+                  <div class="ancor-btn">
+                    <a href="#" class="ancor-style">
+                      lets start<i class="fa-light fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="history-item">
+                  <div class="history-info">
+                    <div class="history-info-flex">
+                      <span class="history-test-icon"
+                        ><i class="fa-regular fa-car"></i
+                      ></span>
+                      <div class="history-span">
+                        <span class="history-name">Card Test</span>
+                        <span class="history-date"
+                          ><i class="fa-light fa-calendar-days"></i>
+                          <span>Dec , 15 ,2025</span></span
+                        >
+                      </div>
+                    </div>
+                    <div class="history-result failed">45%</div>
+                  </div>
+                  <div class="history-answer">
+                    <div class="answer right">
+                      <div class="answer-flex">
+                        <i class="fa-light fa-circle-check"></i>
+                        Correct
+                      </div>
+                      <span class="counter"><span>25</span> / 40</span>
+                    </div>
+                    <div class="answer wrong">
+                      <div class="answer-flex">
+                        <i class="fa-light fa-circle-xmark"></i>
+                        Wrong
+                      </div>
+                      <span class="counter"><span>15</span> / 40</span>
+                    </div>
+                  </div>
+                  <div class="ancor-btn">
+                    <a href="#" class="ancor-style">
+                      lets start<i class="fa-light fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content" id="password">
+              <form action="">
+                <div class="form-account">
+                  <div class="form-group">
+                    <label class="form-label required">Old Password</label>
+                    <div class="form-input-relative">
+                      <span class="icon-placeholder">
+                        <i class="fa-light fa-lock-keyhole"></i>
+                      </span>
+                      <label class="password-show">
+                        <input type="checkbox" onchange="showPass(this)" />
+                        <i class="fa-light fa-eye"></i>
+                      </label>
+                      <input
+                        type="password"
+                        class="form-input"
+                        placeholder="*********"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label required">New Password</label>
+                    <div class="form-input-relative">
+                      <span class="icon-placeholder">
+                        <i class="fa-light fa-lock-keyhole"></i>
+                      </span>
+                      <label class="password-show">
+                        <input type="checkbox" onchange="showPass(this)" />
+                        <i class="fa-light fa-eye"></i>
+                      </label>
+                      <input
+                        type="password"
+                        class="form-input"
+                        placeholder="*********"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label required">Confirm Password</label>
+                    <div class="form-input-relative">
+                      <span class="icon-placeholder">
+                        <i class="fa-light fa-lock-keyhole"></i>
+                      </span>
+                      <label class="password-show">
+                        <input type="checkbox" onchange="showPass(this)" />
+                        <i class="fa-light fa-eye"></i>
+                      </label>
+                      <input
+                        type="password"
+                        class="form-input"
+                        placeholder="*********"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-btn-cont">
+                    <button class="form-btn" type="submit">Confirm</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="content" id="Statistics">
+              <div class="statistics-grid">
+                <div class="statistics-item total">
+                  <img src="images/statistics1.svg" alt="statistics" />
+                  <span class="statistics-number">12</span>
+                  <span class="statistics-name">Total Tests</span>
+                </div>
+                <div class="statistics-item average">
+                  <img src="images/statistics2.svg" alt="statistics" />
+                  <span class="statistics-number">78%</span>
+                  <span class="statistics-name">Average Score</span>
+                </div>
+                <div class="statistics-item best">
+                  <img src="images/statistics3.svg" alt="statistics" />
+                  <span class="statistics-number">95%</span>
+                  <span class="statistics-name">Best Score</span>
+                </div>
+              </div>
+              <div class="statistics-box">
+                <div class="statistics-header">
+                  <h3 class="statistics-head">Driving tests</h3>
+                  <div class="statistics-color">
+                    <div class="statistics-color-info">
+                      <span class="color not"></span>
+                      <span>Not completed.</span>
+                    </div>
+                    <div class="statistics-color-info">
+                      <span class="color successful"></span>
+                      <span>Successful.</span>
+                    </div>
+                    <div class="statistics-color-info">
+                      <span class="color failed"></span>
+                      <span>failed</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="statistics-shape">
+                  <div class="line success" style="height: 98%">
+                    <div class="tooltiptext">38 / 40</div>
+                  </div>
+                  <div class="line not" style="height: 60%">
+                    <div class="tooltiptext">25 / 40</div>
+                  </div>
+                  <div class="line failed" style="height: 45%">
+                    <div class="tooltiptext">15 / 40</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
