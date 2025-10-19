@@ -548,24 +548,24 @@
   .group_collapse {
     width: 100%;
   }
-  .btn_collapse_ {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    text-transform: capitalize;
-    text-align: start;
-    position: relative;
-    background-color: transparent;
-    border: none;
-    outline: none !important;
-  }
-  .toggle_collapse {
-    border-bottom: 1px solid $sec;
-    .dark-mode & {
-      border-color: rgba(255, 255, 255, 0.1019607843);
-    }
+}
+.btn_collapse_ {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-transform: capitalize;
+  text-align: start;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none !important;
+}
+.toggle_collapse {
+  border-bottom: 1px solid $sec;
+  .dark-mode & {
+    border-color: rgba(255, 255, 255, 0.1019607843);
   }
 }
 .toggle_collapse {
@@ -610,12 +610,12 @@
 }
 
 .bar--horizontal {
-  transform: rotate(540deg);
+  transform: rotate(90deg);
   transition: all ease 0.5s;
 }
 
 .is-active .bar--horizontal {
-  transform: rotate(90deg);
+  transform: rotate(540deg);
 }
 
 @-webkit-keyframes minus {

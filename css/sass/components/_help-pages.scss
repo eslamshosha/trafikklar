@@ -1,0 +1,271 @@
+.help-section {
+  padding-top: 80px;
+  min-height: 20vh;
+  @include max-991 {
+    padding-top: 42px;
+  }
+  .section-title {
+    text-align: center;
+    justify-content: center;
+    &::before {
+      display: none;
+    }
+  }
+  .section-pargh {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 42px;
+    @include max-991 {
+      margin-bottom: 32px;
+    }
+  }
+}
+.faq-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .collapse_parant {
+    margin: 0;
+  }
+  .group_collapse {
+    padding: 24px;
+    border: 1px solid $sec;
+    background-color: $background;
+    border-radius: 16px;
+    .dark-mode & {
+      border-color: #ffffff1a;
+    }
+  }
+  @include max-991 {
+    padding: 16px;
+  }
+  .icon-wrapper {
+    width: 42px;
+    height: 42px;
+    @include max-991 {
+      width: 32px;
+      height: 32px;
+    }
+    border-radius: 8px;
+    @include flexCenter;
+    flex-shrink: 0;
+    background-color: rgba(237, 241, 254, 0.2);
+    .dark-mode & {
+      background-color: rgba(237, 241, 254, 0.1);
+    }
+    &.is-active {
+      background-color: $main;
+      .bar {
+        background-color: $white !important;
+      }
+    }
+  }
+  .bar {
+    top: 50%;
+  }
+  .toggle_collapse {
+    border-bottom: none;
+  }
+}
+.faq-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: $primary;
+  @include max-991 {
+    font-size: 14px;
+  }
+  .dark-mode & {
+    color: #f5f5ff;
+  }
+}
+.faq-pargh {
+  font-weight: 400;
+  font-size: 16px;
+  color: $text-sec;
+  margin-bottom: 0;
+  text-align: start;
+  .dark-mode & {
+    color: #ededed;
+  }
+  @include max-991 {
+    font-size: 14px;
+  }
+}
+
+//contact-page
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+.form-group textarea.form-input {
+  height: 103px;
+  padding: 12px;
+}
+.contact-form {
+  width: 100%;
+  padding: 24px;
+  border: 1px solid $line-color;
+  border-radius: 16px;
+  background-color: $background;
+  .dark-mode & {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  @include max-991 {
+    padding: 16px;
+  }
+  .form-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.contact-title {
+  font-weight: 500;
+  font-size: 20px;
+  color: $link-text;
+  margin-bottom: 24px;
+  @include max-991 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}
+.contact-info {
+  width: 100%;
+}
+.contact-card {
+  width: 100%;
+  padding: 24px;
+  border: 1px solid $line-color;
+  border-radius: 16px;
+  background-color: $background;
+  .dark-mode & {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include max-991 {
+    padding: 16px;
+    gap: 16px;
+  }
+}
+.contact-pargh {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 0;
+  color: #616161;
+  .dark-mode & {
+    color: #9e9e9e;
+  }
+  @include max-991 {
+    font-size: 14px;
+  }
+}
+.contact-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include max-991 {
+    gap: 16px;
+  }
+}
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include max-991 {
+    gap: 12px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+    width: max-content;
+    color: $link-text;
+    @include tr;
+    i {
+      font-size: 22px;
+      @include max-991 {
+        font-size: 20px;
+      }
+    }
+    .contact-flex {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .contact-name {
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .contact-info {
+      font-weight: 500;
+      font-size: 14px;
+      color: #616161;
+      .dark-mode & {
+        color: #9e9e9e;
+      }
+    }
+    &:hover {
+      color: $main;
+    }
+  }
+}
+//terms-page
+.terms-container {
+  text-align: start;
+}
+.terms-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  color: $main;
+  margin-bottom: 16px;
+  @include max-991 {
+    font-size: 16px;
+  }
+}
+.color-dots {
+  width: 35px;
+  display: flex;
+  align-items: center;
+  .dot1 {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $main;
+    flex-shrink: 0;
+  }
+  .dot2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #a87fff;
+    border: 2px solid $main;
+    flex-shrink: 0;
+    margin-inline-start: -30%;
+  }
+}
+.terms-pargh {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 32px;
+  color: $link-text;
+  .dark-mode &{
+    color: $f5f5f5;
+  }
+  @include max-991 {
+    font-size: 14px;
+  }
+}
