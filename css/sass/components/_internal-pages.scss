@@ -318,6 +318,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  flex-shrink: 0;
 }
 .check-label input[type="checkbox"] ~ .checkmark {
   border-radius: 4.5px;

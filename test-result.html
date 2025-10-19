@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
-  <body class="internal-page">
+  <body>
     <!-- <img src="images/light-bg.svg" alt="bg" class="body-bg" /> -->
     <!-- preloader -->
     <div class="preloader">
@@ -297,66 +297,350 @@
     </header>
     <!-- header section     -->
     <!-- content-section -->
-    <div class="content-section">
+    <div class="test-section">
       <div class="container">
-        <h2 class="content-section-title">Choose Your Subscription</h2>
-        <p class="content-section-pargh">
-          Unlock full access to driving tests, practice questions, and learning
-          resources to help you prepare efficiently and pass your driving
-          license with confidence.
-        </p>
-        <div class="pricing-cont">
-          <div class="pricing-item">
-            <div class="pricing-head">
-              <h3>Theory course + theory tests</h3>
-              <span class="pricing-custom">🔥 Popular</span>
+        <div class="test-answer-container">
+          <div class="test-grid">
+            <div class="feedback-cont">
+              <h4 class="feedback-head">Feedback</h4>
+              <p class="feedback-pargh">
+                Nice try, but unfortunately you made too many mistakes. You´´ll
+                have to practice more in order to get ready for the real deal.
+                We recommend that you buy access and get started practicing
+                today!
+              </p>
             </div>
-            <div class="pricing-price">
-              <span class="price">$2.99</span>
-              <span class="period">/ 1 Day Accesss</span>
+            <div class="result-progress-cont">
+              <div class="result-pro">
+                <span class="result-name">5 correct answer(s)</span>
+                <div class="result-progress correct">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="result-pro">
+                <span class="result-name">5 wrong answer(s)</span>
+                <div class="result-progress wrong">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="test-time">
+                <span class="time-head">Time spent</span>
+                <span class="time-number"
+                  ><span>29 : 32</span> <i class="fa-light fa-clock"></i
+                ></span>
+              </div>
             </div>
-            <a href="#" class="custom-ancor">Subscribe</a>
-            <ul class="pricing-list">
-              <li>Theory tests</li>
-              <li>Explanations to all questions</li>
-              <li>Traffic sign test</li>
-              <li>Sound on all content</li>
-              <li>Instructive videos</li>
-            </ul>
           </div>
-          <div class="pricing-item active">
-            <div class="pricing-head">
-              <h3>Theory course + theory tests</h3>
+          <div class="history-header">
+            <div class="answer-icon">
+              <i class="fa-light fa-circle-xmark"></i>
             </div>
-            <div class="pricing-price">
-              <span class="price">$7.99</span>
-              <span class="period">/ 7 Day Accesss</span>
+            <div class="history-flex">
+              <span class="history-head">Recent Tests </span>
+              <span class="history-num">6 Completed</span>
             </div>
-            <a href="#" class="custom-ancor">Subscribe</a>
-            <ul class="pricing-list">
-              <li>Theory tests</li>
-              <li>Explanations to all questions</li>
-              <li>Traffic sign test</li>
-              <li>Sound on all content</li>
-              <li>Instructive videos</li>
-            </ul>
           </div>
-          <div class="pricing-item">
-            <div class="pricing-head">
-              <h3>Theory course + theory tests</h3>
+          <div class="collapse_parant">
+            <div class="group_collapse">
+              <button class="btn_collapse_">
+                <div class="test-title">
+                  <div class="test-number">1</div>
+                  <span class="test-name"
+                    >Can you reverse your car on a one-way street?</span
+                  >
+                </div>
+                <div class="icon-wrapper">
+                  <div class="bar backg_toggle bar--vertical poen_backg"></div>
+                  <div
+                    class="bar backg_toggle bar--horizontal poen_backg"
+                  ></div>
+                </div>
+              </button>
+              <div class="toggle_collapse open-collapse">
+                <div class="test-grid">
+                  <div class="test-img">
+                    <figure>
+                      <img src="images/test-img.png" alt="test-img" />
+                    </figure>
+                  </div>
+                  <div class="test-labels">
+                    <div class="check-group">
+                      <div class="check-width">
+                        <!-- add class correct to check-label -->
+                        <!-- or add class wrong to check-label -->
+                        <label class="check-label correct">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">a</span> No, it’s not
+                              allowed
+                            </span>
+                            <div class="ship-cont">
+                              <span>correct answer</span>
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label wrong">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">b</span> Only if the road
+                              is empty
+                            </span>
+                            <div class="ship-cont">
+                              <span>your answer</span>
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">c</span> Only for short
+                              distance
+                            </span>
+                            <div class="ship-cont">
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">d</span> Yes, anytime
+                            </span>
+                            <div class="ship-cont">
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="answer-note">
+                  <h5>Explanation</h5>
+                  <p>
+                    As a rule, stopping or parking is prohibited on roadway
+                    widenings intended for bus/tram/taxi stops, or closer than
+                    20 metres from a public traffic
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="pricing-price">
-              <span class="price">$19.99</span>
-              <span class="period">/ 30 Day Accesss</span>
+          </div>
+          <div class="collapse_parant">
+            <div class="group_collapse">
+              <button class="btn_collapse_">
+                <div class="test-title">
+                  <div class="test-number">2</div>
+                  <span class="test-name"
+                    >Can you reverse your car on a one-way street?</span
+                  >
+                </div>
+                <div class="icon-wrapper">
+                  <div class="bar backg_toggle bar--vertical poen_backg"></div>
+                  <div
+                    class="bar backg_toggle bar--horizontal poen_backg"
+                  ></div>
+                </div>
+              </button>
+              <div class="toggle_collapse">
+                <div class="test-grid">
+                  <div class="test-img">
+                    <figure>
+                      <img src="images/test-img.png" alt="test-img" />
+                    </figure>
+                  </div>
+                  <div class="test-labels">
+                    <div class="check-group">
+                      <div class="check-width">
+                        <!-- add class correct to check-label -->
+                        <!-- or add class wrong to check-label -->
+                        <label class="check-label correct">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">a</span> No, it’s not
+                              allowed
+                            </span>
+                            <div class="ship-cont">
+                              <span>correct answer</span>
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label wrong">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">b</span> Only if the road
+                              is empty
+                            </span>
+                            <div class="ship-cont">
+                              <span>your answer</span>
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">c</span> Only for short
+                              distance
+                            </span>
+                            <div class="ship-cont">
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">d</span> Yes, anytime
+                            </span>
+                            <div class="ship-cont">
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="answer-note">
+                  <h5>Explanation</h5>
+                  <p>
+                    As a rule, stopping or parking is prohibited on roadway
+                    widenings intended for bus/tram/taxi stops, or closer than
+                    20 metres from a public traffic
+                  </p>
+                </div>
+              </div>
             </div>
-            <a href="#" class="custom-ancor">Subscribe</a>
-            <ul class="pricing-list">
-              <li>Theory tests</li>
-              <li>Explanations to all questions</li>
-              <li>Traffic sign test</li>
-              <li>Sound on all content</li>
-              <li>Instructive videos</li>
-            </ul>
+          </div>
+          <div class="collapse_parant">
+            <div class="group_collapse">
+              <button class="btn_collapse_">
+                <div class="test-title">
+                  <div class="test-number">3</div>
+                  <span class="test-name"
+                    >Can you reverse your car on a one-way street?</span
+                  >
+                </div>
+                <div class="icon-wrapper">
+                  <div class="bar backg_toggle bar--vertical poen_backg"></div>
+                  <div
+                    class="bar backg_toggle bar--horizontal poen_backg"
+                  ></div>
+                </div>
+              </button>
+              <div class="toggle_collapse">
+                <div class="test-grid">
+                  <div class="test-img">
+                    <figure>
+                      <img src="images/test-img.png" alt="test-img" />
+                    </figure>
+                  </div>
+                  <div class="test-labels">
+                    <div class="check-group">
+                      <div class="check-width">
+                        <!-- add class correct to check-label -->
+                        <!-- or add class wrong to check-label -->
+                        <label class="check-label correct">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">a</span> No, it’s not
+                              allowed
+                            </span>
+                            <div class="ship-cont">
+                              <span>correct answer</span>
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label wrong">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">b</span> Only if the road
+                              is empty
+                            </span>
+                            <div class="ship-cont">
+                              <span>your answer</span>
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">c</span> Only for short
+                              distance
+                            </span>
+                            <div class="ship-cont">
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="check-width">
+                        <label class="check-label">
+                          <span class="payment-radio">
+                            <span class="check-text"
+                              ><span class="check-num">d</span> Yes, anytime
+                            </span>
+                            <div class="ship-cont">
+                              <input type="radio" name="place" disabled />
+                              <span class="checkmark"></span>
+                            </div>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="answer-note">
+                  <h5>Explanation</h5>
+                  <p>
+                    As a rule, stopping or parking is prohibited on roadway
+                    widenings intended for bus/tram/taxi stops, or closer than
+                    20 metres from a public traffic
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

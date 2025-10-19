@@ -192,14 +192,14 @@
   .mobile-content {
     display: none;
   }
-}
-li {
-  padding: 0 16px;
-  &.line {
-    padding: 0;
-  }
-  @include max-991 {
-    padding: 0;
+  li {
+    padding: 0 16px;
+    &.line {
+      padding: 0;
+    }
+    @include max-991 {
+      padding: 0;
+    }
   }
 }
 .side-btn {

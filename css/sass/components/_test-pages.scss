@@ -1,0 +1,662 @@
+.test-section {
+  padding-top: 50px;
+  min-height: 20vh;
+  @include max-991 {
+    padding-top: 24px;
+  }
+}
+.test-progress {
+  max-width: 461px;
+  margin-bottom: 32px;
+  @include max-991 {
+    margin-bottom: 16px;
+  }
+}
+.test-pro {
+  margin-bottom: 16px;
+}
+.test-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  color: $link-text;
+  margin-bottom: 12px;
+  .number {
+    font-weight: 600;
+    font-size: 14px;
+    color: $link-text;
+    span {
+      color: $main;
+    }
+  }
+}
+.test-progess {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 12px;
+  border-radius: 6px;
+  background-color: $back;
+  .dark-mode & {
+    background-color: $sec;
+  }
+  span {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #4f6ef7 0%, #a87fff 100%);
+    border-radius: 6px;
+  }
+}
+.test-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background-color: #edf1fe80;
+  border: 1px solid $back;
+  .dark-mode & {
+    background-color: $black;
+    border-color: #ffffff1a;
+  }
+  color: $main;
+  font-size: 16px;
+  @include max-991 {
+    font-size: 14px;
+  }
+  .dark-mode & {
+    color: #ededed;
+  }
+  .time-head {
+    font-weight: 500;
+  }
+  .time-number {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    i {
+      font-size: 18px;
+    }
+  }
+}
+.test-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 32px;
+  @include max-991 {
+    margin-bottom: 16px;
+  }
+}
+.test-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .test-number {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    @include flexCenter;
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: $link-text;
+    background-color: #f8f8f8;
+    .dark-mode & {
+      background-color: $sec;
+    }
+    @include max-991 {
+      width: 36px;
+      height: 36px;
+      font-size: 14px;
+    }
+  }
+  .test-name {
+    font-weight: 500;
+    font-size: 26px;
+    color: $link-text;
+    @include max-991 {
+      font-size: 16px;
+    }
+  }
+}
+.icon-sound {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $back;
+  color: $main;
+  border: none;
+  outline: none !important;
+  font-size: 22px;
+  @include flexCenter;
+  flex-shrink: 0;
+  @include tr;
+  @include max-991 {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  &:hover {
+    background-color: $main;
+    color: $white;
+  }
+}
+.test-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  @include max-991 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+.test-img {
+  width: 100%;
+  overflow: hidden;
+  figure {
+    width: 100%;
+    aspect-ratio: 624/328;
+    padding: 12px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    @include flexCenter;
+    border: 1px solid $line-color;
+    .dark-mode & {
+      border-color: #ffffff1a;
+    }
+    img {
+      border-radius: 12px;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+.test-labels {
+  width: 100%;
+  overflow: hidden;
+  .custom-btn {
+    width: 100%;
+  }
+  .check-width {
+    width: 100%;
+  }
+  .check-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+    @include max-991 {
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+  }
+  .check-label {
+    width: 100%;
+    height: 64px;
+    background-color: transparent;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 12px;
+    margin-bottom: 0;
+    border: 1px solid $line-color;
+    @include tr;
+    @include max-991 {
+      height: 56px;
+    }
+    .dark-mode & {
+      border-color: #ffffff33;
+    }
+    @include tr;
+    .checkmark {
+      position: relative;
+    }
+  }
+  .payment-radio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+  }
+  .check-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    color: $text-sec;
+    .dark-mode & {
+      color: #ededed;
+    }
+    @include max-991 {
+      font-size: 14px;
+    }
+  }
+  .check-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    @include flexCenter;
+    flex-shrink: 0;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    color: $text-sec;
+    .dark-mode & {
+      color: #ededed;
+      background-color: $sec;
+    }
+  }
+  .ship-cont {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    @include max-991 {
+      font-size: 10px;
+    }
+  }
+  .check-label:has(input:checked) {
+    border: 1px solid #edf1fe;
+    background: #e5e9fe;
+    color: $main;
+    .check-text {
+      color: $main;
+    }
+    .check-num {
+      background-color: #4f6ef726;
+      color: $main;
+    }
+  }
+}
+.correct.check-label:has(input:checked) {
+  border: 1px solid #2fd36f;
+  background: #2fd36f1a;
+  color: #2fd36f;
+  .check-text {
+    color: #2fd36f;
+  }
+  .check-num {
+    background-color: #2fd36f26;
+    color: #2fd36f;
+  }
+}
+.wrong.check-label:has(input:checked) {
+  border: 1px solid #f54141;
+  background: #f5414180;
+  color: #f54141;
+  .check-text {
+    color: #f54141;
+  }
+  .check-num {
+    background-color: #f5414126;
+    color: #f54141;
+  }
+}
+.correct.check-label input:checked ~ .checkmark {
+  border-color: #2fd36f;
+}
+.correct.check-label .checkmark:after {
+  background-color: #2fd36f;
+}
+.wrong.check-label input:checked ~ .checkmark {
+  border-color: #f54141;
+}
+.wrong.check-label .checkmark:after {
+  background-color: #f54141;
+}
+.test-btn-cont {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  @include max-991 {
+    flex-wrap: wrap;
+  }
+  .ancor-style {
+    @include max-991 {
+      height: 44px;
+      font-size: 14px;
+    }
+    .dark-mode & {
+      background-color: #edf1fe;
+      &:hover {
+        color: $main;
+      }
+    }
+  }
+}
+.answer-note {
+  text-align: start;
+  padding: 16px;
+  background-color: #ed8a0a1a;
+  border-radius: 12px;
+  h5 {
+    font-weight: 600;
+    font-size: 18px;
+    color: #ed8a0a;
+    margin-bottom: 12px;
+    @include max-991 {
+      font-size: 16px;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #616161;
+    margin: 0;
+    @include max-991 {
+      font-size: 14px;
+    }
+    .dark-mode & {
+      color: #ededed;
+    }
+  }
+}
+.back-btn {
+  @include flexCenter;
+  gap: 8px;
+  width: 100%;
+  height: 52px;
+  // padding: 22px 0;
+  border-radius: 12px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  @include tr;
+  outline: none !important;
+  text-decoration: none;
+  overflow: hidden;
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  color: #9e9e9e;
+  i {
+    font-size: 14px;
+  }
+  &:hover {
+    color: $white;
+    background-color: $main;
+  }
+  @include max-991 {
+    height: 44px;
+    font-size: 14px;
+  }
+}
+.test-answer-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 32px 24px;
+  border-radius: 12px;
+  background-color: rgba(248, 248, 248, 0.502);
+  .dark-mode & {
+    background-color: rgba(16, 16, 17, 0.502);
+  }
+  @include max-991 {
+    padding: 16px 12px;
+  }
+  .history-header {
+    margin-top: 12px;
+  }
+  .check-label:hover input ~ .checkmark {
+    border-color: $border;
+  }
+  .correct.check-label {
+    border: 1px solid #2fd36f;
+    background: #2fd36f1a;
+    color: #2fd36f;
+    .check-text {
+      color: #2fd36f;
+    }
+    .check-num {
+      background-color: #2fd36f26;
+      color: #2fd36f;
+    }
+  }
+  .wrong.check-label {
+    border: 1px solid #f54141;
+    background: #f5414180;
+    color: #f54141;
+    .check-text {
+      color: #f54141;
+    }
+    .check-num {
+      background-color: #f5414126;
+      color: #f54141;
+    }
+  }
+  .correct.check-label .checkmark {
+    border-color: #2fd36f;
+  }
+  .correct.check-label .checkmark:after {
+    background-color: #2fd36f;
+    opacity: 1;
+    visibility: visible;
+  }
+  .wrong.check-label .checkmark {
+    border-color: #f54141;
+  }
+  .wrong.check-label .checkmark:after {
+    background-color: #f54141;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.feedback-head {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: $link-text;
+  text-transform: capitalize;
+  @include max-991 {
+    font-size: 16px;
+  }
+}
+.feedback-pargh {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 0;
+  color: $input-text;
+  .dark-mode & {
+    color: $white;
+  }
+  @include max-991 {
+    font-size: 14px;
+  }
+}
+.result-progress-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  @include max-991 {
+    gap: 16px;
+  }
+}
+.result-pro {
+  .result-name {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: inline-block;
+    color: $link-text;
+    .dark-mode & {
+      color: #ededed;
+    }
+    @include max-991 {
+      font-size: 14px;
+    }
+  }
+}
+.result-pro {
+  width: 100%;
+}
+.result-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  overflow: hidden;
+  width: 100%;
+  span {
+    width: 100%;
+    height: 16px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  &.correct span {
+    background-color: #2fd36f;
+  }
+  &.wrong span {
+    background-color: #f54141;
+  }
+}
+.answer-icon {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #f541411a;
+  font-size: 22px;
+  @include flexCenter;
+  color: #f54141;
+  @include max-991 {
+    font-size: 18px;
+    height: 36px;
+    width: 36px;
+  }
+}
+.collapse_parant {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.test-answer-container {
+  .group_collapse {
+    width: 100%;
+  }
+  .btn_collapse_ {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    text-transform: capitalize;
+    text-align: start;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+  }
+  .toggle_collapse {
+    border-bottom: 1px solid $sec;
+    .dark-mode & {
+      border-color: rgba(255, 255, 255, 0.1019607843);
+    }
+  }
+}
+.toggle_collapse {
+  padding: 24px 0 16px;
+  display: none;
+}
+.toggle_collapse.open-collapse {
+  display: block;
+}
+.icon-wrapper {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  @include flexCenter;
+  i {
+    color: $white;
+    font-size: 15px;
+    @include tr;
+  }
+  &.is-active {
+    i {
+      transform: rotate(-87deg);
+      margin-inline-end: -30px;
+      @include max-767 {
+        margin-inline-end: -20px;
+      }
+    }
+  }
+}
+.icon-wrapper {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  top: 11px;
+  height: 2px;
+  width: 12px;
+  background-color: $link-text;
+}
+
+.bar--horizontal {
+  transform: rotate(540deg);
+  transition: all ease 0.5s;
+}
+
+.is-active .bar--horizontal {
+  transform: rotate(90deg);
+}
+
+@-webkit-keyframes minus {
+  100% {
+    transform: rotate(540deg);
+  }
+}
+
+@keyframes minus {
+  100% {
+    transform: rotate(540deg);
+  }
+}
+@-webkit-keyframes plus {
+  100% {
+    transform: rotate(540deg);
+  }
+}
+@keyframes plus {
+  100% {
+    transform: rotate(540deg);
+  }
+}
+.minus {
+  -webkit-animation: minus 0.5s ease;
+  animation: minus 0.5s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.plus {
+  -webkit-animation: plus 0.5s ease;
+  animation: plus 0.5s ease;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.poen_co {
+  color: $main !important;
+}
+
+.poen_backg {
+  background-color: $main !important;
+}

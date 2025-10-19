@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
-  <body class="internal-page">
+  <body>
     <!-- <img src="images/light-bg.svg" alt="bg" class="body-bg" /> -->
     <!-- preloader -->
     <div class="preloader">
@@ -297,67 +297,104 @@
     </header>
     <!-- header section     -->
     <!-- content-section -->
-    <div class="content-section">
+    <div class="test-section">
       <div class="container">
-        <h2 class="content-section-title">Choose Your Subscription</h2>
-        <p class="content-section-pargh">
-          Unlock full access to driving tests, practice questions, and learning
-          resources to help you prepare efficiently and pass your driving
-          license with confidence.
-        </p>
-        <div class="pricing-cont">
-          <div class="pricing-item">
-            <div class="pricing-head">
-              <h3>Theory course + theory tests</h3>
-              <span class="pricing-custom">🔥 Popular</span>
+        <div class="test-progress">
+          <div class="test-pro">
+            <div class="test-flex">
+              <span>Number of questions</span>
+              <span class="Number"><span>1</span> \ 40</span>
             </div>
-            <div class="pricing-price">
-              <span class="price">$2.99</span>
-              <span class="period">/ 1 Day Accesss</span>
+            <div class="test-progess">
+              <span style="width: 25%"></span>
             </div>
-            <a href="#" class="custom-ancor">Subscribe</a>
-            <ul class="pricing-list">
-              <li>Theory tests</li>
-              <li>Explanations to all questions</li>
-              <li>Traffic sign test</li>
-              <li>Sound on all content</li>
-              <li>Instructive videos</li>
-            </ul>
           </div>
-          <div class="pricing-item active">
-            <div class="pricing-head">
-              <h3>Theory course + theory tests</h3>
-            </div>
-            <div class="pricing-price">
-              <span class="price">$7.99</span>
-              <span class="period">/ 7 Day Accesss</span>
-            </div>
-            <a href="#" class="custom-ancor">Subscribe</a>
-            <ul class="pricing-list">
-              <li>Theory tests</li>
-              <li>Explanations to all questions</li>
-              <li>Traffic sign test</li>
-              <li>Sound on all content</li>
-              <li>Instructive videos</li>
-            </ul>
+          <div class="test-time">
+            <span class="time-head">Time remaining</span>
+            <span class="time-number"
+              ><span>29 : 32</span> <i class="fa-light fa-clock"></i
+            ></span>
           </div>
-          <div class="pricing-item">
-            <div class="pricing-head">
-              <h3>Theory course + theory tests</h3>
-            </div>
-            <div class="pricing-price">
-              <span class="price">$19.99</span>
-              <span class="period">/ 30 Day Accesss</span>
-            </div>
-            <a href="#" class="custom-ancor">Subscribe</a>
-            <ul class="pricing-list">
-              <li>Theory tests</li>
-              <li>Explanations to all questions</li>
-              <li>Traffic sign test</li>
-              <li>Sound on all content</li>
-              <li>Instructive videos</li>
-            </ul>
+        </div>
+        <div class="test-header">
+          <div class="test-title">
+            <div class="test-number">1</div>
+            <span class="test-name"
+              >Can you reverse your car on a one-way street?</span
+            >
           </div>
+          <button class="icon-sound">
+            <i class="fa-light fa-volume-high"></i>
+          </button>
+        </div>
+        <div class="test-grid">
+          <form class="test-labels">
+            <div class="check-group">
+              <div class="check-width">
+                <!-- add class correct to check-label -->
+                <!-- or add class wrong to check-label -->
+                <label class="check-label">
+                  <span class="payment-radio">
+                    <span class="check-text"
+                      ><span class="check-num">a</span> No, it’s not allowed
+                    </span>
+                    <div class="ship-cont">
+                      <input type="radio" name="place" />
+                      <span class="checkmark"></span>
+                    </div>
+                  </span>
+                </label>
+              </div>
+              <div class="check-width">
+                <label class="check-label">
+                  <span class="payment-radio">
+                    <span class="check-text"
+                      ><span class="check-num">b</span> Only if the road is
+                      empty
+                    </span>
+                    <div class="ship-cont">
+                      <input type="radio" name="place" />
+                      <span class="checkmark"></span>
+                    </div>
+                  </span>
+                </label>
+              </div>
+              <div class="check-width">
+                <label class="check-label">
+                  <span class="payment-radio">
+                    <span class="check-text"
+                      ><span class="check-num">c</span> Only for short distance
+                    </span>
+                    <div class="ship-cont">
+                      <input type="radio" name="place" />
+                      <span class="checkmark"></span>
+                    </div>
+                  </span>
+                </label>
+              </div>
+              <div class="check-width">
+                <label class="check-label">
+                  <span class="payment-radio">
+                    <span class="check-text"
+                      ><span class="check-num">d</span> Yes, anytime
+                    </span>
+                    <div class="ship-cont">
+                      <input type="radio" name="place" />
+                      <span class="checkmark"></span>
+                    </div>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div class="test-btn-cont">
+              <button class="back-btn">Previous</button>
+              <a href="#" class="ancor-style">
+                <i class="fa-light fa-eye"></i>
+                Show Answer
+              </a>
+              <button class="custom-btn">next</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

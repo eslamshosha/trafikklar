@@ -28,32 +28,32 @@ $(document).ready(function () {
   });
 
   //fixed nav3
-  $stickyNav = $(".top-header");
-  $(window).on("scroll load", function () {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 200) {
-      $stickyNav.addClass("fixed-nav", 500);
-    } else {
-      $stickyNav.removeClass("fixed-nav", 500);
-    }
-    if (scroll == 0) {
-      $stickyNav.removeClass("fixed-nav", 500);
-    }
-  });
-  var $stickyheader = $("header");
-  lastScroll = 0;
-  $(window).on("scroll load", function () {
-    var scroll = $(window).scrollTop();
-    if (lastScroll - scroll > 0) {
-      $stickyheader.addClass("fixed-header", { duration: 1000 });
-    } else {
-      $stickyheader.removeClass("fixed-header", { duration: 500 });
-    }
-    lastScroll = scroll;
-    if (scroll == 0) {
-      $stickyheader.removeClass("fixed-header", { duration: 500 });
-    }
-  });
+  // $stickyNav = $(".top-header");
+  // $(window).on("scroll load", function () {
+  //   var scroll = $(window).scrollTop();
+  //   if (scroll >= 200) {
+  //     $stickyNav.addClass("fixed-nav", 500);
+  //   } else {
+  //     $stickyNav.removeClass("fixed-nav", 500);
+  //   }
+  //   if (scroll == 0) {
+  //     $stickyNav.removeClass("fixed-nav", 500);
+  //   }
+  // });
+  // var $stickyheader = $("header");
+  // lastScroll = 0;
+  // $(window).on("scroll load", function () {
+  //   var scroll = $(window).scrollTop();
+  //   if (lastScroll - scroll > 0) {
+  //     $stickyheader.addClass("fixed-header", { duration: 1000 });
+  //   } else {
+  //     $stickyheader.removeClass("fixed-header", { duration: 500 });
+  //   }
+  //   lastScroll = scroll;
+  //   if (scroll == 0) {
+  //     $stickyheader.removeClass("fixed-header", { duration: 500 });
+  //   }
+  // });
   //////////** fixed arrow to top**//////////
   $(".arrow-top").click(function () {
     $("html").css("scroll-behavior", "unset");
@@ -120,6 +120,35 @@ $(document).ready(function () {
         otp_fields.eq(index).val(value);
       });
     });
+  // collapse~~~~~~~~
+  $(".btn_collapse_").click(function () {
+    const toggle = $(this).next(".toggle_collapse");
+
+    $(".toggle_collapse").not(toggle).slideUp("slow");
+    $(".btn_collapse_ .icon-wrapper")
+      .not($(this).children(".icon-wrapper"))
+      .removeClass("is-active");
+    $(".color_toggle")
+      .not($(this).prev(".color_toggle"))
+      .removeClass("poen_co");
+    $(".backg_toggle")
+      .not($(this).find(".backg_toggle"))
+      .removeClass("poen_backg");
+
+    $(toggle)
+      .stop()
+      .slideToggle("slow")
+
+      .prev(".color_toggle")
+      .toggleClass("poen_co");
+    $(toggle)
+      .prev()
+      .children()
+      .children(".backg_toggle")
+      .toggleClass("poen_backg");
+    $(toggle).parent().prev(".color_toggle").toggleClass("poen_co");
+    $(this).children(".icon-wrapper").toggleClass("is-active");
+  });
 });
 // dark mode
 

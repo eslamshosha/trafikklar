@@ -273,9 +273,10 @@ html[dir="ltr"] .icon-dir {
 }
 /*top header*/
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  position: relative;
   width: 100%;
   z-index: 200;
   background-color: transparent;
@@ -604,7 +605,7 @@ header {
     border: none;
     outline: none !important;
     transition: all 0.3s ease-in-out;
-    .dark-mode &{
+    .dark-mode & {
       color: $white;
     }
   }
