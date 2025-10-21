@@ -1666,6 +1666,40 @@ html[dir=ltr] .ancor-link i {
   max-width: 327px;
 }
 
+.tests-slider {
+  position: relative;
+}
+
+.tests-slider .swiper-pagination {
+  position: relative;
+  width: 100%;
+  bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 6px;
+}
+
+.tests-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background-color: var(--main-color);
+  opacity: 0.3;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  outline: none !important;
+  border-radius: 50%;
+}
+
+.tests-slider .swiper-pagination .swiper-pagination-bullet:hover {
+  opacity: 1;
+}
+
+.tests-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
 /*                                   footer                            */
 footer {
   margin-top: 100px;
@@ -5302,6 +5336,9 @@ html[dir=ltr] .return-link i {
   font-size: 16px;
   margin-bottom: 32px;
   color: var(--link-text);
+}
+.dark-mode .terms-pargh {
+  color: #f5f5f5;
 }
 @media only screen and (max-width: 991px) {
   .terms-pargh {

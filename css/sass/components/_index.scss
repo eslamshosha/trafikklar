@@ -418,3 +418,37 @@ body {
     max-width: 327px;
   }
 }
+
+//tests sider
+.tests-slider{
+  position: relative;
+}
+.tests-slider .swiper-pagination {
+  position: relative;
+  width: 100%;
+  bottom: auto;
+  @include flexCenter;
+  margin-top: 20px;
+  gap: 6px;
+}
+
+.tests-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background-color: $main;
+  opacity: 0.3;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  outline: none !important;
+  border-radius: 50%;
+}
+
+.tests-slider .swiper-pagination .swiper-pagination-bullet:hover {
+  opacity: 1;
+}
+
+.tests-slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}

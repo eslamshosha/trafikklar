@@ -15,7 +15,28 @@ $(document).ready(function () {
   //     disabled: true,
   //   });
   // }
-
+  //test slider
+  var testsSlider = new Swiper(".tests-slider .swiper", {
+    autoplay: true,
+    pagination: {
+      el: ".tests-slider .swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 13,
+      },
+      1199: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+    },
+  });
   //phone size menu onclick
   $("#menu-id").click(function (e) {
     e.preventDefault();
@@ -160,7 +181,7 @@ let imgapple = $(".apple-btn img");
 
 if (localStorage.getItem("dark-mode") == "true") {
   $("body").addClass("dark-mode");
-  logo.attr("src", "images/logo-dark.svg");
+  // logo.attr("src", "images/logo-dark.svg");
   imgbg.attr("src", "images/dark-bg.svg");
   imggoogle.attr("src", "images/google-btn-dark.png");
   imgapple.attr("src", "images/apple-btn-dark.png");
@@ -180,12 +201,12 @@ $(".darkmode-input , .switch-darkmode").on("change", function () {
       $(".darkmode-input").prop("checked", true);
     }
     localStorage.setItem("dark-mode", "true");
-    logo.attr("src", "images/logo-dark.svg");
+    // logo.attr("src", "images/logo-dark.svg");
     imgbg.attr("src", "images/dark-bg.svg");
     imggoogle.attr("src", "images/google-btn-dark.png");
     imgapple.attr("src", "images/apple-btn-dark.png");
   } else {
-    logo.attr("src", "images/logo.svg");
+    // logo.attr("src", "images/logo.svg");
     localStorage.setItem("dark-mode", "false");
     $(".darkmode-input").prop("checked", false);
     imgbg.attr("src", "images/light-bg.svg");
