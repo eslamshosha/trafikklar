@@ -486,7 +486,6 @@ ul.breadcrumb li a:hover {
   color: var(--primary-color);
   text-align: center;
   min-width: 240px;
-  width: 100%;
   border-radius: 10px;
   z-index: 300;
   top: 35px;
@@ -496,7 +495,10 @@ ul.breadcrumb li a:hover {
 }
 @media only screen and (max-width: 991px) {
   .dropdown-content {
-    background-color: transparent;
+    left: auto;
+    inset-inline-end: -50%;
+    padding: 5px 8px;
+    min-width: unset;
   }
 }
 
@@ -523,6 +525,11 @@ ul.breadcrumb li a:hover {
   position: relative;
   transition: all 0.3s ease-in-out;
 }
+@media only screen and (max-width: 991px) {
+  .dropdown-content a {
+    padding: 8px;
+  }
+}
 .dropdown-content a:hover {
   color: var(--main-color);
 }
@@ -538,12 +545,13 @@ ul.breadcrumb li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 5px;
+  gap: 12px;
   font-weight: 500;
   font-size: 14px;
 }
 .lang-drop img {
-  max-width: 40x;
+  max-width: 40px;
+  border-radius: 4px;
 }
 .lang-drop .circle {
   border: 1px solid var(--border-color);
@@ -567,7 +575,13 @@ ul.breadcrumb li a:hover {
   background-color: var(--main-color);
 }
 
-.dropdown:hover .dropdown-content {
+@media only screen and (min-width: 992px) {
+  .dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.dropdown.active .dropdown-content {
   visibility: visible;
   opacity: 1;
 }
@@ -1391,6 +1405,7 @@ html[dir=ltr] .ancor-link i {
 
 .about-us {
   margin-bottom: 120px;
+  padding-top: 10px;
 }
 @media only screen and (max-width: 991px) {
   .about-us {
@@ -1455,6 +1470,10 @@ html[dir=ltr] .ancor-link i {
   .section-pargh {
     font-size: 12px;
   }
+}
+
+.tests-section {
+  padding-top: 10px;
 }
 
 .tests-grid {

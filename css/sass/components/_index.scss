@@ -181,6 +181,7 @@ body {
 }
 .about-us {
   margin-bottom: 120px;
+  padding-top: 10px;
   @include max-991 {
     margin-bottom: 60px;
   }
@@ -232,6 +233,9 @@ body {
   @include max-991 {
     font-size: 12px;
   }
+}
+.tests-section {
+  padding-top: 10px;
 }
 .tests-grid {
   display: grid;
@@ -420,7 +424,7 @@ body {
 }
 
 //tests sider
-.tests-slider{
+.tests-slider {
   position: relative;
 }
 .tests-slider .swiper-pagination {
