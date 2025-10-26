@@ -960,7 +960,7 @@ header {
   transition: 0.3s;
   text-transform: capitalize;
   border-bottom: 1px solid var(--sec-color);
-  padding: 16px 0;
+  padding: 16px;
 }
 .profile-menu a.warning {
   color: #f54141;
